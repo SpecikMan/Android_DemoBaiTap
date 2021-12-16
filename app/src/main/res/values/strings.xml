@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DemoBaiTap</string>
+    <string name="get_question_from_api">GET QUESTION FROM API</string>
+    <string name="show_notification">Show Notification</string>
+</resources>
