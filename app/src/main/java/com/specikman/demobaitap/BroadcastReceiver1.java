@@ -3,7 +3,6 @@ package com.specikman.demobaitap;
 import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 import android.widget.Toast;
 
 public class BroadcastReceiver1 extends android.content.BroadcastReceiver {
@@ -26,3 +25,4 @@ public class BroadcastReceiver1 extends android.content.BroadcastReceiver {
         }
     }
 }
+

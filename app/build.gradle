@@ -4,7 +4,6 @@ plugins {
 
 android {
     compileSdk 31
-
     defaultConfig {
         applicationId "com.specikman.demobaitap"
         minSdk 24
@@ -14,7 +13,6 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
     buildTypes {
         release {
             minifyEnabled false
@@ -25,6 +23,10 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+
+
+    //Thêm vào
     buildFeatures{
         viewBinding true
     }

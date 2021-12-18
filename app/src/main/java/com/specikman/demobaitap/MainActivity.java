@@ -55,10 +55,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
         binding.btnShow.setOnClickListener(e -> {
+            //Lấy response_string từ SharedPref và convert thành List<Question>
             List<Question> questions = convertToListQuestions(
                     getSharedPreferences("myPref", Context.MODE_PRIVATE)
                             .getString("response", "No value"));
-            Log.d("API", questions.size() + "");
+            //Lấy ngẫu nhiên 1 Question từ List<Question> và truyền vào method showNotification() để hiển thị lên Notification
             Question randQuestion = questions.get(new Random().nextInt(questions.size()));
             showNotification(randQuestion);
         });
@@ -75,8 +76,8 @@ public class MainActivity extends AppCompatActivity {
                 null,
                 response -> {
                     String response_string = response.toString();
-                    SharedPreferences sharedPref = getSharedPreferences("myPref", Context.MODE_PRIVATE);
-                    sharedPref.edit().putString("response", response_string).apply();
+                    SharedPreferences sharedPref = getSharedPreferences("myPref", Context.MODE_PRIVATE); //Create SharedPref
+                    sharedPref.edit().putString("response", response_string).apply(); //Store response string in SharedPref
                     Toast.makeText(this, "Questions stored in pref", Toast.LENGTH_SHORT).show();
                     binding.btnShow.setEnabled(true);
                 },
